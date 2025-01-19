@@ -1,0 +1,16 @@
+restapi:
+  baseUrl: '/api'
+
+springdoc:
+  api-docs:
+    path: ${restapi.baseUrl}/docs
+  swagger-ui:
+    url: ${restapi.baseUrl}/docs/open-api.yaml
+    path: ${restapi.baseUrl}/docs/swagger-ui.html
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8090
